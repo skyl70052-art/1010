@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的品牌特色卡片 - 咖啡專題</title>
+    <!-- 引入外部 CSS 樣式表 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= 上半部：你原本的咖啡特色卡片 ================= -->
+    <main class="main-section">
+        <!-- 卡片父容器：使用 Flexbox 布局 -->
+        <div class="card-container">
+
+            <!-- 第一張卡片 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" alt="經典手沖咖啡">
+                <div class="card-content">
+                    <h3>经典手冲咖啡</h3>
+                    <p>严选单一产区精品咖啡豆，透过精准的水温与手冲手法，萃取出丰富的果香与独特风味层次。</p>
+                    <button class="btn">了解更多</button>
+                </div>
+            </div>
+
+            <!-- 第二張卡片 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=800&auto=format&fit=crop" alt="義式濃縮拉花">
+                <div class="card-content">
+                    <h3>意式拿铁与拉花</h3>
+                    <p>浓郁的意式浓缩咖啡融合绵密细致的蒸气鲜奶，为您带来视觉与味觉的双重飨宴。</p>
+                    <button class="btn">了解更多</button>
+                </div>
+            </div>
+
+            <!-- 第三張卡片 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=800&auto=format&fit=crop" alt="冷萃冰滴咖啡">
+                <div class="card-content">
+                    <h3>冷萃冰滴咖啡</h3>
+                    <p>经过 12 小时低温慢速滴滤萃取，口感滑顺甘甜，低酸度且充满浓郁的回甘香气。</p>
+                    <button class="btn">了解更多</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= 下半部：Tutorial 10 新增聯絡表單 ================= -->
+    <!-- 步驟三：在 Footer 上方新增 <section id="contact"> 區塊，加入 netlify 屬性 -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>聯絡我們</h2>
+            <p class="contact-desc">對我們的精品咖啡或合作方案感興趣嗎？歡迎填寫表單與我們聯繫！</p>
+
+            <!-- 加入 Netlify 表單屬性 (data-netlify="true" 與 name) -->
+            <form name="coffee-contact" method="POST" data-netlify="true" class="contact-form">
+                
+                <!-- 1. 您的姓名 (務必加上 name 屬性，避免常見錯誤一) -->
+                <div class="form-group">
+                    <label for="name">您的姓名</label>
+                    <input type="text" id="name" name="name" placeholder="請輸入您的姓名" required>
+                </div>
+
+                <!-- 2. 電子郵件 -->
+                <div class="form-group">
+                    <label for="email">電子郵件</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div>
+
+                <!-- 作業要求二：在表單中新增 <select> 下拉選單元件，讓訪客選擇諮詢主題 -->
+                <div class="form-group">
+                    <label for="topic">諮詢主題</label>
+                    <select id="topic" name="topic" required>
+                        <option value="" disabled selected>請選擇諮詢主題...</option>
+                        <option value="project">專案合作</option>
+                        <option value="tech">技術交流</option>
+                        <option value="beans">咖啡豆訂購諮詢</option>
+                    </select>
+                </div>
+
+                <!-- 3. 想對我說的話 -->
+                <div class="form-group">
+                    <label for="message">想對我說的話</label>
+                    <textarea id="message" name="message" rows="4" placeholder="請輸入您的訊息內容..." required></textarea>
+                </div>
+
+                <!-- 送出按鈕 -->
+                <button type="submit" class="btn submit-btn">送出訊息</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= 最底部：Tutorial 10 新增 Footer 頁尾 ================= -->
+    <!-- 步驟二：在網頁最下方新增 <footer> 標籤，寫入網站標題、版權宣告與快速導覽連結 -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- 網站標題與版權宣告 -->
+            <div class="footer-info">
+                <h3>我的咖啡品牌作品集</h3>
+                <p>&copy; 2026 All Rights Reserved. 網頁設計課程練習</p>
+            </div>
+
+            <!-- 快速導覽連結 -->
+            <div class="footer-links">
+                <h4>快速導覽</h4>
+                <ul>
+                    <li><a href="#">回到頂部</a></li>
+                    <li><a href="#contact">聯絡我們</a></li>
+                </ul>
+            </div>
+
+            <!-- 作業要求一：在 Footer 中加入至少 2 個外部連結 (如 GitHub 或 LinkedIn) -->
+            <div class="footer-social">
+                <h4>關注與連結</h4>
+                <ul>
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub 作品集</a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn 檔案</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
